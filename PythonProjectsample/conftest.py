@@ -7,7 +7,6 @@ def page():
     browser = playwright.chromium.launch(headless=False)
     context = browser.new_context()
     page = context.new_page()
-    #added by vivek
     page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
     yield page
     browser.close()
