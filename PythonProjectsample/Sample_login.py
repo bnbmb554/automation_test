@@ -1,5 +1,5 @@
-def test_required_field_validation(page):
-
+def test_required_field_validation(browser_page):
+    page = browser_page
     # Email & Password Required validation
     page.get_by_role("button", name="Login").click()
     required_element = page.get_by_text("Required").first
